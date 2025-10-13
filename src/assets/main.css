@@ -129,3 +129,11 @@
     color-scheme: light;
   }
 }
+.hover\:shadow-neon:hover {
+  box-shadow: 
+      0 0 10px rgba(253, 186, 147, 0.5),
+      0 0 20px rgba(253, 186, 147, 0.4),
+      0 0 30px rgba(253, 186, 147, 0.3),
+      0 0 40px rgba(253, 186, 147, 0.2);
+    border-color: rgba(253, 186, 147, 0.8);
+  }

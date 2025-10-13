@@ -21,13 +21,3 @@ function goToURL() {
     <slot></slot>
   </button>
 </template>
-<style>
-.hover\:shadow-neon:hover {
-  box-shadow: 
-    0 0 10px rgba(147, 197, 253, 0.5),
-    0 0 20px rgba(147, 197, 253, 0.4),
-    0 0 30px rgba(147, 197, 253, 0.3),
-    0 0 40px rgba(147, 197, 253, 0.2);
-  border-color: rgba(147, 197, 253, 0.8);
-}
-</style>

@@ -37,8 +37,8 @@ const dotGridBaseColor = computed(() => {
       <header class="flex align-middle justify-center">
         <HeaderComponent />
       </header>
-      <main class="max-w-[1200px] mx-auto p-4 mt-[15vh] flex items-center justify-between">
-        <Presentacion />
+      <main class="max-w-[1200px] mx-auto flex items-center justify-between">
+          <Presentacion />
       </main>
     </div>
     <ArrowBigDownDash class="absolute bottom-5 left-1/2 -translate-x-1/2 w-10 h-10 text-[#ffb029] animate-bounce-y" />
