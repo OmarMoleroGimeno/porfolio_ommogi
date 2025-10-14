@@ -14,15 +14,15 @@ import stickerUrl from '@/assets/sticker-omar.png';
 <template>
     <PillNav
         :logo="stickerUrl"
-        logoAlt="Company Logo"
+        logoAlt="OMMOGI Logo"
         :items="[
-        { label: 'Home', href: '/' },
-        { label: 'About', href: '/about' },
-        { label: 'Services', href: '/services' },
-        { label: 'Contact', href: '/contact' }
+        { label: 'Habilidades', href: '/' },
+        { label: 'Estudios', href: '/' },
+        { label: 'Experiencia', href: '/services' },
+        { label: 'Projectos', href: '/about' },
+        { label: 'Contacto', href: '/contact' }
         ]"
         activeHref="/"
-        class="custom-nav"
         ease="power2.easeOut"
         baseColor="#ffb029"
         :pillColor="pillColor"

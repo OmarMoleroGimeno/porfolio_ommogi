@@ -6,13 +6,14 @@ import ProfileCard from '@/components/Components/ProfileCard/ProfileCard.vue';
 import iconpatternUrl from '@/assets/iconpattern.png';
 import grainUrl from '@/assets/grain.webp';
 import stickerUrl from '@/assets/sticker-omar.png';
+import { ArrowBigDownDash } from 'lucide-vue-next';
 
 const handleContactClick = () => {
     console.log('Contact button clicked!');
 };
 </script>
 <template>
-    <div class="flex h-screen">
+    <div class="flex h-screen relative">
         <div class="flex flex-col justify-center align-middle">
             <div>
             <h1 class="text-6xl font-bold mb-4 text-black dark:text-white">Hola, soy Omar Molero Gimeno</h1>
@@ -82,5 +83,23 @@ const handleContactClick = () => {
                 @contact-click="handleContactClick"
             />
         </div>
+        <ArrowBigDownDash class="absolute bottom-5 left-1/2 -translate-x-1/2 w-10 h-10 text-[#ffb029] animate-bounce-y" />
     </div>
+    
 </template>
+<style>
+@keyframes bounce-y {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-y {
+  animation: bounce-y 1s infinite;
+}
+</style>

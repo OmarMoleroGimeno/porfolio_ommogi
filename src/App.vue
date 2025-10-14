@@ -3,10 +3,10 @@ import { computed } from 'vue';
 import { useDark } from '@vueuse/core';
 
 import DotGrid from '@/components/Backgrounds/DotGrid/DotGrid.vue';
-import { ArrowBigDownDash } from 'lucide-vue-next';
 
-import Presentacion from './components/Presentation/Presentacion.vue';
-import HeaderComponent from './components/Header/HeaderComponent.vue';
+import Presentacion from '@/components/Presentation/Presentacion.vue';
+import HeaderComponent from '@/components/Header/HeaderComponent.vue';
+import TimeLineComponent from '@/components/TimeLine/TimeLineComponent.vue';
 
 const isDark = useDark();
 const dotGridBaseColor = computed(() => {
@@ -27,7 +27,7 @@ const dotGridBaseColor = computed(() => {
         :shock-radius="250"
         :shock-strength="5"
         :max-speed="5000"
-        :resistance="750"
+        :resistance="2000"
         :return-duration="1.5"
         class-name="w-full h-full dark:bg-[#0b0b0b] bg-[#f0f0f0]"
       />
@@ -37,26 +37,18 @@ const dotGridBaseColor = computed(() => {
       <header class="flex align-middle justify-center">
         <HeaderComponent />
       </header>
-      <main class="max-w-[1200px] mx-auto flex items-center justify-between">
+      <main class="max-w-[1200px] mx-auto flex flex-col items-start justify-between px-8">
           <Presentacion />
+          <TimeLineComponent />
       </main>
     </div>
-    <ArrowBigDownDash class="absolute bottom-5 left-1/2 -translate-x-1/2 w-10 h-10 text-[#ffb029] animate-bounce-y" />
   </div>
 </template>
-<style>
-@keyframes bounce-y {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
 
-.animate-bounce-y {
-  animation: bounce-y 2s infinite;
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+body {
+  font-family: 'Onest', sans-serif;
 }
 </style>

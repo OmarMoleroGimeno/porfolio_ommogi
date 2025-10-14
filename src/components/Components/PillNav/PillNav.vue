@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { gsap } from 'gsap';
-import { computed, onBeforeUnmount, onMounted, ref, useTemplateRef, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, useTemplateRef, watch, nextTick } from 'vue';
 
 type PillNavItem = {
   label: string;
@@ -89,15 +89,15 @@ const layout = () => {
     tlRefs.value[index]?.kill();
     const tl = gsap.timeline({ paused: true });
 
-    tl.to(circle, { scale: 1.2, xPercent: -50, duration: 2, ease: props.ease, overwrite: 'auto' }, 0);
+    tl.to(circle, { scale: 1.2, xPercent: -50, duration: 1, ease: props.ease, overwrite: 'auto', force3D: true }, 0);
 
     if (label) {
-      tl.to(label, { y: -(h + 8), duration: 2, ease: props.ease, overwrite: 'auto' }, 0);
+      tl.to(label, { y: -(h + 8), duration: 1, ease: props.ease, overwrite: 'auto', force3D: true }, 0);
     }
 
     if (white) {
-      gsap.set(white, { y: Math.ceil(h + 100), opacity: 0 });
-      tl.to(white, { y: 0, opacity: 1, duration: 2, ease: props.ease, overwrite: 'auto' }, 0);
+      gsap.set(white, { y: Math.ceil(h + 100), opacity: 0, force3D: true });
+      tl.to(white, { y: 0, opacity: 1, duration: 1, ease: props.ease, overwrite: 'auto', force3D: true }, 0);
     }
 
     tlRefs.value[index] = tl;
@@ -149,8 +149,9 @@ onBeforeUnmount(() => {
 });
 
 watch(
-  () => [props.items, props.ease, props.initialLoadAnimation],
-  () => {
+  () => [props.items, props.ease, props.initialLoadAnimation, props.baseColor, props.pillColor],
+  async () => {
+    await nextTick();
     layout();
   },
   { deep: true }
