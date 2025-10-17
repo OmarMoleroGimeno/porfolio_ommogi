@@ -7,6 +7,7 @@ import DotGrid from '@/components/Backgrounds/DotGrid/DotGrid.vue';
 import Presentacion from '@/components/Presentation/Presentacion.vue';
 import HeaderComponent from '@/components/Header/HeaderComponent.vue';
 import TimeLineComponent from '@/components/TimeLine/TimeLineComponent.vue';
+import Skills from '@/components/Skills/Skills.vue';
 
 const isDark = useDark();
 const dotGridBaseColor = computed(() => {
@@ -20,9 +21,9 @@ const dotGridBaseColor = computed(() => {
     <div class="absolute inset-0 z-0">
       <DotGrid
         :dot-size="3"
-        :gap="15"
+        :gap="20"
         :base-color="dotGridBaseColor" active-color="#ffb029"
-        :proximity="150"
+        :proximity="100"
         :speed-trigger="100"
         :shock-radius="250"
         :shock-strength="5"
@@ -39,6 +40,7 @@ const dotGridBaseColor = computed(() => {
       </header>
       <main class="max-w-[1200px] mx-auto flex flex-col items-start justify-between px-8">
           <Presentacion />
+          <Skills />
           <TimeLineComponent />
       </main>
     </div>

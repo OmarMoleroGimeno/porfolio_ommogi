@@ -3,9 +3,9 @@ import TextType from '@/components/TextAnimations/TextType/TextType.vue';
 import RadioButton from '@/components/Buttons/RadioButton.vue';
 import CurriculumButton from '@/components/Buttons/CurriculumButton.vue';
 import ProfileCard from '@/components/Components/ProfileCard/ProfileCard.vue';
-import iconpatternUrl from '@/assets/iconpattern.png';
-import grainUrl from '@/assets/grain.webp';
-import stickerUrl from '@/assets/sticker-omar.png';
+import iconpatternUrl from '@/assets/img/iconpattern.png';
+import grainUrl from '@/assets/img/grain.webp';
+import stickerUrl from '@/assets/img/sticker-omar.png';
 import { ArrowBigDownDash } from 'lucide-vue-next';
 
 const handleContactClick = () => {

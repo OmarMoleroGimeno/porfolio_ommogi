@@ -8,7 +8,7 @@ const timelineEvents = [
 
 <template>
   <section class="max-w-3xl p-8 mx-auto">
-    <h2 class="text-4xl">Estúdios</h2>
+    <h2 class="flex justify-center text-4xl font-bold">Estúdios</h2>
     <div class="relative flex flex-col gap-y-12 mt-8">
       
       <div class="absolute top-0 w-[1px] h-full -translate-x-1/2 bg-[#6b6b6b]"></div>

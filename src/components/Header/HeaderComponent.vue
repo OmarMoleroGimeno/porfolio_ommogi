@@ -9,7 +9,7 @@ const pillColor = computed(() => {
   return isDark.value ? '#0b0b0b' : '#ffffff';
 });
 
-import stickerUrl from '@/assets/sticker-omar.png';
+import stickerUrl from '@/assets/img/sticker-omar.png';
 </script>
 <template>
     <PillNav
