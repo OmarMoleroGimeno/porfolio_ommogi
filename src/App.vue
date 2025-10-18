@@ -6,8 +6,10 @@ import DotGrid from '@/components/Backgrounds/DotGrid/DotGrid.vue';
 
 import Presentacion from '@/components/Presentation/Presentacion.vue';
 import HeaderComponent from '@/components/Header/HeaderComponent.vue';
-import TimeLineComponent from '@/components/TimeLine/TimeLineComponent.vue';
 import Skills from '@/components/Skills/Skills.vue';
+import Experiencia from '@/components/Experiencia/Experiencia.vue';
+import Estudios from '@/components/Estudios/Estudios.vue';
+import Proyectos from '@/components/Proyectos/Proyectos.vue';
 
 const isDark = useDark();
 const dotGridBaseColor = computed(() => {
@@ -25,11 +27,11 @@ const dotGridBaseColor = computed(() => {
         :base-color="dotGridBaseColor" active-color="#ffb029"
         :proximity="100"
         :speed-trigger="100"
-        :shock-radius="250"
+        :shock-radius="150"
         :shock-strength="5"
         :max-speed="5000"
         :resistance="2000"
-        :return-duration="1.5"
+        :return-duration="1"
         class-name="w-full h-full dark:bg-[#0b0b0b] bg-[#f0f0f0]"
       />
     </div>
@@ -41,7 +43,9 @@ const dotGridBaseColor = computed(() => {
       <main class="max-w-[1200px] mx-auto flex flex-col items-start justify-between px-8">
           <Presentacion />
           <Skills />
-          <TimeLineComponent />
+          <Experiencia />
+          <Proyectos />
+          <Estudios />
       </main>
     </div>
   </div>

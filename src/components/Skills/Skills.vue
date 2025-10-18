@@ -10,7 +10,7 @@ import git from '../../assets/img/skills/git.svg';
 import figma from '../../assets/img/skills/figma.svg';
 import angular from '../../assets/img/skills/angular.svg';
 import atlassian from '../../assets/img/skills/atlassian.svg';
-import cypress from '../../assets/img/skills/cypress.svg';
+import cypress from '../../assets/img/skills/cypress.webp';
 import docker from '../../assets/img/skills/docker.svg';
 import java from '../../assets/img/skills/java.svg';
 import laravel from '../../assets/img/skills/laravel.svg';

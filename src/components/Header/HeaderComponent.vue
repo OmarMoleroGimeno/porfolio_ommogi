@@ -17,9 +17,9 @@ import stickerUrl from '@/assets/img/sticker-omar.png';
         logoAlt="OMMOGI Logo"
         :items="[
         { label: 'Habilidades', href: '/' },
-        { label: 'Estudios', href: '/' },
-        { label: 'Experiencia', href: '/services' },
-        { label: 'Projectos', href: '/about' },
+        { label: 'Experiencia', href: '/experience' },
+        { label: 'Projectos', href: '/projects' },
+        { label: 'Estúdios', href: '/studies' },
         { label: 'Contacto', href: '/contact' }
         ]"
         activeHref="/"
